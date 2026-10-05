@@ -1,4 +1,5 @@
 1. Answers:
+
 Reset and Interrupt Vectors:
 The reset vector is at 0x0000 and the interrupt vector is at 0x0008 because these are the addresses used by the PIC18 for reset and interrupts. The `PSECT` and `ORG` commands place them at those addresses without needing linker options.
 RETFIE 1:
@@ -17,7 +18,9 @@ Interrupt Delay:
 The ISR needs its own delay variables because the interrupt can happen while the main program is using `delay_100ms`. Using the same delay variables would overwrite the main program's counters and affect its timing.
 
 2. AI Usage Acknowledgment:
+
 AI tools were used as a supplemental resource for understanding the assignment, debugging assembly code, and checking syntax and logic. I reviewed and tested the code before submitting it.
 
 3. Status:
+
 M1, M3, and M4 worked during testing. M2 was not fully working because the interrupt did not produce the expected RD7 blinking and heartbeat behavior, and I was not able to fully correct it before submission.
